@@ -1,1 +1,1 @@
-# lpg-planar
+# Lpg Planar
