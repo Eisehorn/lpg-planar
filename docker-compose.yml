@@ -1,0 +1,39 @@
+networks:
+  lpg-planar:
+
+services:
+  postgres:
+    image: "postgres"
+    env_file:
+      - postgres.env
+    networks:
+      - lpg-planar
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U user -d transcendence" ]
+      interval: 5s
+      timeout: 5s
+      retries: 100
+  backend:
+    image: "t-backend:1.0.0"
+    build: "backend/"
+    ports:
+      - 3000:3000
+    env_file:
+      - backend.env
+    networks:
+      - lpg-planar
+    depends_on:
+      postgres:
+        condition: service_healthy
+  # frontend:
+  #   image: "t-frontend:1.0.0"
+  #   build: "frontend/"
+  #   ports:
+  #     - 6969:6969
+  #   env_file:
+  #     - frontend.env
+  #   networks:
+  #     - lpg-planar
+  #   depends_on:
+  #     postgres:
+  #       condition: service_healthy
