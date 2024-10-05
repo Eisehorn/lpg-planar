@@ -8,6 +8,8 @@ services:
       - postgres.env
     networks:
       - lpg-planar
+    ports:
+      - 5432:5432
     healthcheck:
       test: [ "CMD-SHELL", "pg_isready -U user -d lpg-planar" ]
       interval: 5s
