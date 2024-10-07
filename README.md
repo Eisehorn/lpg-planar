@@ -13,8 +13,9 @@ While either of this method is running, you can access the build at `http://loca
 
 Regarding Github, **nobody** can work on the master branch. Everyone will have his own branch made like `develop-fgiuliano`, where he should follow this few steps:
 
-- make sure to be on his own branch `ex: git checkout develpo-fgiuliano`
-- pull the changes from the develop branch `ex: git pull develop develop-fgiuliano`
+- make sure to be on his own branch `ex: git checkout develop-fgiuliano`
+- fetch the changes from the develop branch `ex: git fetch origin`
+- merge the changes on your branch `ex: git merge origin/develop`
 - work on whatever
 - add the changes made `ex: git add . (or git add filenames to be safer)`
 - commit the changes using the issue number you've worked on `ex: git commit -m 'iss_001'`
