@@ -31,3 +31,8 @@ As discussed, the stack used for the frontend will be React, while the backend w
 The Database will be a Postgres one that will interact, **with the backend only**, through Prisma.
 
 [![My Skills](https://skillicons.dev/icons?i=postgres,prisma)](https://skillicons.dev)
+
+
+## Documentation 
+
+https://vite.dev/guide/ Getting started with Vite + React
