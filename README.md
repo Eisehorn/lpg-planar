@@ -9,6 +9,8 @@ You probably still need to run the postgres container (to be verified). At this 
 
 While either of this method is running, you can access the build at `http://localhost:6969`
 
+To start the storybook and see all the react components run `npm run storybook`
+
 ## 2) Github use
 
 Regarding Github, **nobody** can work on the master branch. Everyone will have his own branch made like `develop-fgiuliano`, where he should follow this few steps:
@@ -35,4 +37,6 @@ The Database will be a Postgres one that will interact, **with the backend only*
 
 ## Documentation 
 
-https://vite.dev/guide/ Getting started with Vite + React
+https://stackblitz.com/edit/vitejs-vite-whuhem?file=src%2Fvite-env.d.ts,src%2FApp.tsx&terminal=dev - https://vite.dev/guide/ Getting started with Vite + React
+
+https://storybook.js.org/docs Storybook
