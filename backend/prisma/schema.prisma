@@ -18,9 +18,10 @@ model User {
   username           String
   avatar             String
   google_id          String? // Google User ID
-  two_factor_secret  String?
+  password           String?
+  // two_factor_secret  String?
   two_factor_enabled Boolean @default(false)
-
-  friends      String[]
-  blockedUsers String[]
+  //
+  // friends      String[]
+  // blockedUsers String[]
 }
