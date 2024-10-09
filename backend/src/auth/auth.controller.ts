@@ -42,6 +42,10 @@ export class AuthController {
 	@Get('/users')
 	@HttpCode(HttpStatus.OK)
 	async users(username: string, password: string) {
+		if (!username || !password) {
+			throw new UnauthorizedException('Username or Password Missing');
+		}
+
 		return await this.authService.authUser(username, password);
 	}
 
