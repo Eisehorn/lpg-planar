@@ -19,9 +19,27 @@ model User {
   avatar             String
   google_id          String? // Google User ID
   password           String?
-  // two_factor_secret  String?
   two_factor_enabled Boolean @default(false)
-  //
-  // friends      String[]
-  // blockedUsers String[]
 }
+
+model Leg {
+  id                 String @id @default(cuid())
+  number             Int
+  season             Int
+  is_super           Boolean
+  date               String?
+  results            Json?
+}
+
+model Players {
+  id                 Int @id @default(autoincrement())
+  name               String
+}
+
+// model Leaderboard {
+//   TODO
+// }
+
+// model Season {
+//   TODO
+// }
